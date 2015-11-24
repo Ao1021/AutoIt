@@ -1,0 +1,169 @@
+#include <ButtonConstants.au3>
+#include <GUIConstantsEx.au3>
+#include <StaticConstants.au3>
+#include <WindowsConstants.au3>
+#Region ### START Koda GUI section ### Form=I:\TOOL\useful paper tool\论文助手.kxf
+$Form1_1 = GUICreate("论文助手", 971, 472, 143, 126)
+$Group1 = GUICtrlCreateGroup("常用下载论文网站", 16, 16, 129, 273)
+$Button1 = GUICtrlCreateButton("中国知网", 32, 48, 97, 33)
+$Button2 = GUICtrlCreateButton("自动化学报", 32, 88, 97, 33)
+$Button3 = GUICtrlCreateButton("计算机学报", 32, 128, 97, 33)
+$Button4 = GUICtrlCreateButton("IEEE", 32, 168, 97, 33)
+$Button31 = GUICtrlCreateButton("中国通信学术网", 32, 208, 97, 33)
+$Button32 = GUICtrlCreateButton("INDERSCIENCE", 32, 248, 97, 33)
+GUICtrlCreateGroup("", -99, -99, 1, 1)
+$Group2 = GUICtrlCreateGroup("校内网站", 160, 16, 145, 241)
+$Button5 = GUICtrlCreateButton("东华大学信息门户", 176, 48, 113, 33)
+$Button6 = GUICtrlCreateButton("东华大学", 176, 88, 113, 33)
+$Button7 = GUICtrlCreateButton("东华大学研究生部", 176, 128, 113, 33)
+$Button8 = GUICtrlCreateButton("东华大学图书馆", 176, 168, 113, 33)
+$Button9 = GUICtrlCreateButton("东华大学百度贴吧", 176, 208, 113, 33)
+GUICtrlCreateGroup("", -99, -99, 1, 1)
+$Group3 = GUICtrlCreateGroup("ELM+风速预测", 16, 304, 289, 153)
+$Button30 = GUICtrlCreateButton("ELM官网", 32, 328, 97, 33)
+$Button33 = GUICtrlCreateButton("全球风能理事会", 168, 328, 97, 33)
+$Button34 = GUICtrlCreateButton("风能杂志", 32, 369, 97, 33)
+$Button35 = GUICtrlCreateButton("中国新能源网", 168, 368, 97, 33)
+$Button36 = GUICtrlCreateButton("climate", 32, 408, 97, 33)
+$Button37 = GUICtrlCreateButton("黄广斌-ELM 微博", 168, 408, 97, 33)
+GUICtrlCreateGroup("", -99, -99, 1, 1)
+$Group6 = GUICtrlCreateGroup("20 大数据资源", 320, 16, 633, 273)
+$Button10 = GUICtrlCreateButton("Data.gov", 336, 48, 113, 33)
+$Button11 = GUICtrlCreateButton("美国人口普查局", 464, 48, 113, 33)
+$Button12 = GUICtrlCreateButton("欧洲联盟开放数据门户", 768, 240, 153, 33)
+$Button13 = GUICtrlCreateButton("Data.gov.uk", 336, 96, 113, 33)
+$Button14 = GUICtrlCreateButton("中情局世界概况", 464, 96, 113, 33)
+$Button15 = GUICtrlCreateButton("Healthdata.gov", 592, 96, 113, 33)
+$Button16 = GUICtrlCreateButton("NHS 健康和社会保健信息中心", 728, 192, 193, 33)
+$Button17 = GUICtrlCreateButton("Amazon网络服务公共数据集", 736, 96, 185, 33)
+$Button18 = GUICtrlCreateButton("Facebook Graph", 336, 192, 113, 33)
+$Button19 = GUICtrlCreateButton("Gapminder", 464, 192, 113, 33)
+$Button20 = GUICtrlCreateButton("Goole Trends", 336, 144, 121, 33)
+$Button21 = GUICtrlCreateButton("Goole财经", 768, 48, 153, 33)
+$Button22 = GUICtrlCreateButton("Goole Books", 592, 144, 129, 33)
+$Button23 = GUICtrlCreateButton("国家气候数据中心", 744, 144, 177, 33)
+$Button24 = GUICtrlCreateButton("DBpedia", 336, 240, 113, 33)
+$Button25 = GUICtrlCreateButton("Topsy", 464, 240, 113, 33)
+$Button26 = GUICtrlCreateButton("Likebuttom", 592, 192, 113, 33)
+$Button27 = GUICtrlCreateButton("纽约时报", 464, 144, 113, 33)
+$Button28 = GUICtrlCreateButton("百万歌曲数据集", 592, 48, 153, 33)
+$Button29 = GUICtrlCreateButton("Freebase", 592, 240, 153, 33)
+GUICtrlCreateGroup("", -99, -99, 1, 1)
+$Group4 = GUICtrlCreateGroup("学习网站", 320, 304, 449, 153)
+$Button38 = GUICtrlCreateButton("COURSERA", 344, 328, 89, 33)
+$Button39 = GUICtrlCreateButton("Python", 448, 328, 89, 33)
+$Button40 = GUICtrlCreateButton("Linux", 552, 328, 89, 33)
+$Button41 = GUICtrlCreateButton("Ruby", 656, 328, 89, 33)
+$Button42 = GUICtrlCreateButton("JAVA", 656, 392, 89, 33)
+$Button43 = GUICtrlCreateButton("C/C++", 344, 392, 89, 33)
+$Button44 = GUICtrlCreateButton("SQL Server", 448, 392, 89, 33)
+$Button45 = GUICtrlCreateButton("MySQL", 552, 392, 89, 33)
+GUICtrlCreateGroup("", -99, -99, 1, 1)
+$Label1 = GUICtrlCreateLabel("持之以恒", 784, 320, 152, 43)
+GUICtrlSetFont(-1, 28, 400, 0, "华文行楷")
+GUICtrlSetColor(-1, 0xFF0000)
+$Label2 = GUICtrlCreateLabel("天道酬勤", 784, 384, 152, 43)
+GUICtrlSetFont(-1, 28, 400, 0, "华文行楷")
+GUICtrlSetColor(-1, 0xFF0000)
+GUISetState(@SW_SHOW)
+#EndRegion ### END Koda GUI section ###
+
+While 1
+	$nMsg = GUIGetMsg()
+	Switch $nMsg
+		Case $GUI_EVENT_CLOSE
+			Exit
+		 Case $button1
+			ShellExecute("http://www.cnki.net/")
+		 Case $button2
+			ShellExecute("http://www.aas.net.cn/CN/volumn/current.shtml")
+		 Case $button3
+			ShellExecute("http://cjc.ict.ac.cn/")
+		 Case $button4
+			ShellExecute("http://ieeexplore.ieee.org/Xplore/home.jsp")
+		 Case $button5
+			ShellExecute("http://cas.dhu.edu.cn/authserver/login?service=http%3A%2F%2Fmy.dhu.edu.cn%2Findex.portal")
+		 Case $button6
+			ShellExecute("http://www.dhu.edu.cn/")
+		 Case $button7
+			ShellExecute("http://gs.dhu.edu.cn/")
+		 Case $button8
+			ShellExecute("http://library.dhu.edu.cn/site/dh/index.html")
+		 Case $button9
+			ShellExecute("http://tieba.baidu.com/f?kw=%B6%AB%BB%AA%B4%F3%D1%A7&fr=ala0&tpl=5")
+		 Case $button10
+			ShellExecute("http://data.gov/")
+		 Case $button11
+			ShellExecute("http://www.census.gov/data.html")
+		 Case $button12
+			ShellExecute("http://open-data.europa.eu/en/data/")
+		 Case $button13
+			ShellExecute("http://data.gov.uk/")
+		 Case $button14
+			ShellExecute("https://www.cia.gov/library/publications/the-world-factbook/")
+		 Case $button15
+			ShellExecute("https://www.healthdata.gov/")
+		 Case $button16
+			ShellExecute("http://www.hscic.gov.uk/home")
+		 Case $button17
+			ShellExecute("http://aws.amazon.com/datasets")
+		 Case $button18
+			ShellExecute("https://developers.facebook.com/docs/graph-api")
+		 Case $button19
+			ShellExecute("http://www.gapminder.org/data/")
+		 Case $button20
+			ShellExecute("http://www.google.com/trends/explore")
+		 Case $button21
+			ShellExecute("https://www.google.com/finance")
+		 Case $button22
+			ShellExecute("http://storage.googleapis.com/books/ngrams/books/datasetsv2.html")
+		 Case $button23
+			ShellExecute("http://www.ncdc.noaa.gov/data-access/quick-links#loc-clim")
+		 Case $button24
+			ShellExecute("http://wiki.dbpedia.org")
+		 Case $button25
+			ShellExecute("http://topsy.com/")
+		 Case $button26
+			ShellExecute("http://likebutton.com/")
+		 Case $button27
+			ShellExecute("http://developer.nytimes.com/docs")
+		 Case $button28
+			ShellExecute("http://aws.amazon.com/datasets/6468931156960467")
+		 Case $button29
+			ShellExecute("http://www.freebase.com/")
+		 Case $button30
+			ShellExecute("http://www.extreme-learning-machines.org/")
+		 Case $button31
+			ShellExecute("http://www.chinacommunications.cn/CN/volumn/current.shtml")
+		 Case $button32
+			ShellExecute("http://www.inderscience.com/info/inarticletoc.php?jcode=ijahuc&year=2005&vol=1&issue=1/2")
+		 Case $button33
+			ShellExecute("http://www.gwec.net/")
+		 Case $button34
+			ShellExecute("http://www.fengneng.org.cn/")
+		 Case $button35
+			ShellExecute("http://www.newenergy.org.cn/")
+		 Case $button36
+			ShellExecute("http://climate.weather.gc.ca/index_e.html")
+		 Case $button37
+			ShellExecute("http://weibo.com/elm201x")
+		 Case $button38
+			ShellExecute("https://www.coursera.org/")
+		 Case $button39
+			ShellExecute("http://edu.51cto.com/lesson/id-11637.html")
+		 Case $button40
+			ShellExecute("http://edu.51cto.com/lesson/id-34722.html")
+		 Case $button41
+			ShellExecute("http://edu.51cto.com/lesson/id-26534.html")
+		 Case $button42
+			ShellExecute("http://edu.51cto.com/lesson/id-19621.html")
+		 Case $button43
+			ShellExecute("http://edu.51cto.com/lesson/id-28234.html")
+		 Case $button44
+			ShellExecute("http://edu.51cto.com/lesson/id-18451.html")
+		 Case $button45
+			ShellExecute("http://edu.51cto.com/lesson/id-2030.html")
+		 Case $Label2
+			MsgBox(0,'作者信息','余敖 2015年8月18日')
+	EndSwitch
+WEnd
